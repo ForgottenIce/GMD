@@ -1,5 +1,5 @@
-### GMD - Simon Lassen
-This is a repository for all the projects I have created for the GMD Course on VIA.
+# GMD Course - Simon Lassen
+This is a repository for all the projects I have created for the GMD Course at VIA University College.
 
 ### Blogs
 Below is a list of all the blog posts
