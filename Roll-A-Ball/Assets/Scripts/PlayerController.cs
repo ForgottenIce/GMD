@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     public float speed = 10;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public GameObject pickupParent;
     private Rigidbody rb;
     private int count;
     private float movementX;
     private float movementY;
+    private bool canJump = true;
     
     // Start is called before the first frame update
     private void Start()
@@ -28,10 +30,28 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y; 
     }
 
+    private void OnJump()
+    {
+        if (canJump) {
+            Vector3 curVel = rb.velocity;
+            rb.velocity = new Vector3(curVel.x, 10, curVel.z);
+        }
+    }
+
+    private void OnCollisionEnter()
+    {
+        canJump = true;
+    }
+
+    private void OnCollisionExit()
+    {
+        canJump = false;
+    }
+
     private void SetCountText() 
    {
        countText.text =  "Count: " + count;
-       if (count >= 78)
+       if (count >= pickupParent.transform.childCount)
        {
            winTextObject.SetActive(true);
        }
