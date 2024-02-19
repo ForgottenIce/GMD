@@ -8,7 +8,7 @@ Overall the tutorial was very simple to follow. I have previously worked in Unit
 After finishing the tutorial, I made a few additional changes.
 ### Jumping
 I decided to add a jump mechanic. To achieve this, I first added a "Jump" action to my Input Actions
-![Unity Input Actions](input-actions.png)
+![Unity Input Actions](media/input-actions.png)
 Now, whenever the spacebar is pressed, the `OnJump()` method is invoked in the PlayerController script. My implementation looks like this:
 ```c#
 private void OnJump()
@@ -48,7 +48,7 @@ Now this was a bit annoying since every time I added more PickUp objects, I woul
 public GameObject pickupParent;
 ```
 Then in the Unity editor, I dragged the PickUp Parent from the hierarchy to the "PickUp Parent" slot on the PlayerController script
-![PlayerController Dependency Injection](PlayerController-dependency-injection.png)
+![PlayerController Dependency Injection](media/PlayerController-dependency-injection.png)
 Finally, I changed the win condition to the following:
 ```c#
 if (count >= pickupParent.transform.childCount)
@@ -59,4 +59,4 @@ if (count >= pickupParent.transform.childCount)
 And just like that, I have a dynamic win condition that is synced to the total amount of PickUps.
 
 ## The Result
-![Roll a Ball preview](roll-a-ball-preview.png)
+![Roll a Ball preview](media/roll-a-ball-preview.png)
