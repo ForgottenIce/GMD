@@ -9,6 +9,7 @@ After finishing the tutorial, I made a few additional changes.
 ### Jumping
 I decided to add a jump mechanic. To achieve this, I first added a "Jump" action to my Input Actions
 ![Unity Input Actions](media/input-actions.png)
+
 Now, whenever the spacebar is pressed, the `OnJump()` method is invoked in the PlayerController script. My implementation looks like this:
 ```c#
 private void OnJump()
@@ -49,6 +50,7 @@ public GameObject pickupParent;
 ```
 Then in the Unity editor, I dragged the PickUp Parent from the hierarchy to the "PickUp Parent" slot on the PlayerController script
 ![PlayerController Dependency Injection](media/PlayerController-dependency-injection.png)
+
 Finally, I changed the win condition to the following:
 ```c#
 if (count >= pickupParent.transform.childCount)
