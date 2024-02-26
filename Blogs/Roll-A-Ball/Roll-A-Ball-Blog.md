@@ -60,5 +60,11 @@ if (count >= pickupParent.transform.childCount)
 ```
 And just like that, I have a dynamic win condition that is synced to the total amount of PickUps.
 
+### Additional Changes
+After the initial write-up of this blog, I have added additional features to the game.
+1. Better jump collision detection: I added a small Collider under the ball with IsTrigger set to true. This trigger now sets the canJump value, which fixes the issue where touching walls granted infinite jumps.
+2. An Elevator: Activated when the player jumps on top of it
+3. Updated Level: The level now features a few jumps
+
 ## The Result
 ![Roll a Ball preview](media/roll-a-ball-preview.png)
