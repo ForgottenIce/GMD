@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -42,6 +43,11 @@ public class PlayerController : MonoBehaviour
             Vector3 curVel = rb.velocity;
             rb.velocity = new Vector3(curVel.x, jumpHeight, curVel.z);
         }
+    }
+
+    private void OnReset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void SetCountText()
