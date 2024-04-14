@@ -21,7 +21,9 @@ This milestone is a bit vague at the moment, but the idea is that the game is so
 ## Game Ideas / Features to Implement
 - Abilities
   - Dashing
-  - Double Jump
+  - Double jump
   - Speed boost
+  - Ceiling grab (stick to the ceiling)
+  - Gravity flip
 - Trampolines / Bouncy objects
 - Pickup objects (such as trampolines, boxes or other stuff)
