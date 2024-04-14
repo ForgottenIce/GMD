@@ -14,3 +14,14 @@ Here the focus will be around creating the levels (or maybe one big level metroi
 
 ## Milestone 3 (preliminary): Visuals & Polishing
 This milestone is a bit vague at the moment, but the idea is that the game is somewhat finished at this stage and that this last milestone focuses on making the game feel more finished.
+
+## Lore
+
+
+## Game Ideas / Features to Implement
+- Abilities
+  - Dashing
+  - Double Jump
+  - Speed boost
+- Trampolines / Bouncy objects
+- Pickup objects (such as trampolines, boxes or other stuff)
