@@ -13,11 +13,11 @@ public class CameraController : MonoBehaviour
     private float _elapsedTransitionTime;
     
     private Transform _currentTarget;
-    private Transform _previousTarget;
+    private Vector2 _previousTarget;
     
     public void SetCurrentTarget(Transform target)
     {
-        _previousTarget = _currentTarget;
+        _previousTarget = transform.position;
         _currentTarget = target;
         _elapsedTransitionTime = 0;
     }
@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         _currentTarget = playerTransform;
-        _previousTarget = playerTransform;
+        _previousTarget = playerTransform.position;
     }
 
     private void LateUpdate()
@@ -35,8 +35,7 @@ public class CameraController : MonoBehaviour
         if (_elapsedTransitionTime < transitionSpeed)
         {
             _elapsedTransitionTime += Time.deltaTime;
-            var previousTargetOffset = _previousTarget == playerTransform ? playerCameraOffset : Vector2.zero;
-            var lerp = Vector2.Lerp((Vector2)_previousTarget.position + previousTargetOffset, 
+            var lerp = Vector2.Lerp(_previousTarget, 
                 (Vector2)_currentTarget.position + currentTargetOffset, 
                 Mathf.Clamp01(_elapsedTransitionTime / transitionSpeed));
             transform.position = new Vector3(lerp.x, lerp.y, transform.position.z);
