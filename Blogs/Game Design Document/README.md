@@ -7,7 +7,7 @@
 - Maybe metroidvania (as in, one big explorable level)? If that isn't feasible it will be level-based progression instead.
 
 ## Milestone 1: A Test Level With a Playable Character
-For the first milestone, my aim is to have a playable character with most of the moveset completed. The main focus is to experiment and find a control set that feels satistfying. There will also be a focus on creating the unlockable movement abilities, as well as other game object that the player can interact with (such as jump pads, dash orbs, etc.). A testing area will be built that can 
+For the first milestone, my aim is to have a playable character with most of the moveset completed. The main focus is to experiment and find a control set that feels satistfying. There will also be a focus on creating the unlockable movement abilities, as well as other game object that the player can interact with (such as jump pads, dash orbs, etc.). A testing area will be built to test these things.
 
 ## Milestone 2 (preliminary): Creating the Game World & Levels
 Here the focus will be around creating the levels (or maybe one big level metroidvania-like?). I will have to figure out how you progress in the game. The current plan is to make levels/areas that each  focuses on specific movement-based gimmicks that the player unlocks along the way.
