@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +20,13 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody2D _rb;
     private CapsuleCollider2D _col;
+
+    public event Action<float> Moving;
+    public event Action Stopped;
+    public event Action Jumped;
+    public event Action Falling;
+    public event Action Landed;
+    
 
     private void Start()
     {
@@ -57,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
             if (newFallSpeed < -maxFallSpeed) newFallSpeed = -maxFallSpeed;
             _frameVelocity = new Vector2(_frameVelocity.x, newFallSpeed);
             _canJump = false;
+            if (_frameVelocity.y < 0) Falling?.Invoke();
+            else Jumped?.Invoke();
         }
         else
         {
@@ -78,13 +88,16 @@ public class PlayerMovement : MonoBehaviour
             case -1:
                 if (_currentSpeed > 0) _currentSpeed = 0;
                 _currentSpeed += _moveDirection * acceleration;
+                Moving?.Invoke(_moveDirection);
                 break;
             case 1:
                 if (_currentSpeed < 0) _currentSpeed = 0;
                 _currentSpeed += _moveDirection * acceleration;
+                Moving?.Invoke(_moveDirection);
                 break;
             case 0:
                 _currentSpeed = 0;
+                Stopped?.Invoke();
                 break;
         }
         _currentSpeed += _moveDirection * acceleration;
@@ -101,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             _jumpConsumed = true;
         }
 
+        // Descend when jump is released
         if (!_canJump && !_isJumpHeld && _frameVelocity.y > 0)
         {
             _frameVelocity = new Vector2(_frameVelocity.x, _frameVelocity.y * 0.2f);
