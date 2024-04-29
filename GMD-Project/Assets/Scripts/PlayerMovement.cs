@@ -27,7 +27,9 @@ public class PlayerMovement : MonoBehaviour
     public event Action Stopped;
     public event Action Jumped;
     public event Action Falling;
+#pragma warning disable CS0067 // Event is never used
     public event Action Landed; // Not in use for now
+#pragma warning restore CS0067 // Event is never used
     
 
     private void Start()
