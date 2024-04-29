@@ -12,7 +12,12 @@ public class PlayerAnimation : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         
         // Subscribe to events
-        _playerMovement.Moving += () => _animator.Play("player_walk");
+        _playerMovement.Moving += (moveSpeed, maxSpeed) =>
+        {
+            _animator.speed = Mathf.Abs(moveSpeed) / maxSpeed;
+            _animator.Play("player_walk");
+        };
+        
         _playerMovement.DirectionChanged += (moveDirection) =>
         {
             if (moveDirection > 0)
@@ -24,9 +29,29 @@ public class PlayerAnimation : MonoBehaviour
                 _spriteRenderer.flipX = true;
             }
         };
-        _playerMovement.Stopped += () => _animator.Play("player_idle");
-        _playerMovement.Jumped += () => _animator.Play("player_jump");
-        _playerMovement.Falling += () => _animator.Play("player_fall");
-        _playerMovement.Landed += () => _animator.Play("player_land");
+        
+        _playerMovement.Stopped += () =>
+        {
+            _animator.speed = 1;
+            _animator.Play("player_idle");
+        };
+        
+        _playerMovement.Jumped += () =>
+        {
+            _animator.speed = 1;
+            _animator.Play("player_jump");
+        };
+        
+        _playerMovement.Falling += () =>
+        {
+            _animator.speed = 1;
+            _animator.Play("player_fall");
+        };
+        
+        _playerMovement.Landed += () =>
+        {
+            _animator.speed = 1;
+            _animator.Play("player_land");
+        };
     }
 }

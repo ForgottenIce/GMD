@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private InputAction _moveAction;
-    private InputAction _jumpAction;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
     [SerializeField] private float gravity;
@@ -18,11 +16,14 @@ public class PlayerMovement : MonoBehaviour
     private bool _canJump;
     private bool _jumpConsumed;
     
+    private InputAction _moveAction;
+    private InputAction _jumpAction;
+    
     private Rigidbody2D _rb;
     private CapsuleCollider2D _col;
 
-    public event Action Moving;
-    public event Action<float> DirectionChanged;
+    public event Action<float /* moveSpeed */, float /* maxSpeed */> Moving;
+    public event Action<float /* moveDirection */> DirectionChanged;
     public event Action Stopped;
     public event Action Jumped;
     public event Action Falling;
@@ -90,13 +91,13 @@ public class PlayerMovement : MonoBehaviour
                 if (_currentSpeed > 0) _currentSpeed = 0;
                 _currentSpeed += _moveDirection * acceleration;
                 DirectionChanged?.Invoke(_moveDirection);
-                if (_frameVelocity.y == 0) Moving?.Invoke();
+                if (_frameVelocity.y == 0) Moving?.Invoke(_currentSpeed, maxSpeed);
                 break;
             case 1:
                 if (_currentSpeed < 0) _currentSpeed = 0;
                 _currentSpeed += _moveDirection * acceleration;
                 DirectionChanged?.Invoke(_moveDirection);
-                if (_frameVelocity.y == 0) Moving?.Invoke();
+                if (_frameVelocity.y == 0) Moving?.Invoke(_currentSpeed, maxSpeed);
                 break;
             case 0:
                 _currentSpeed = 0;
