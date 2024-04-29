@@ -21,11 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private CapsuleCollider2D _col;
 
-    public event Action<float> Moving;
+    public event Action Moving;
+    public event Action<float> DirectionChanged;
     public event Action Stopped;
     public event Action Jumped;
     public event Action Falling;
-    public event Action Landed;
+    public event Action Landed; // Not in use for now
     
 
     private void Start()
@@ -88,16 +89,18 @@ public class PlayerMovement : MonoBehaviour
             case -1:
                 if (_currentSpeed > 0) _currentSpeed = 0;
                 _currentSpeed += _moveDirection * acceleration;
-                Moving?.Invoke(_moveDirection);
+                DirectionChanged?.Invoke(_moveDirection);
+                if (_frameVelocity.y == 0) Moving?.Invoke();
                 break;
             case 1:
                 if (_currentSpeed < 0) _currentSpeed = 0;
                 _currentSpeed += _moveDirection * acceleration;
-                Moving?.Invoke(_moveDirection);
+                DirectionChanged?.Invoke(_moveDirection);
+                if (_frameVelocity.y == 0) Moving?.Invoke();
                 break;
             case 0:
                 _currentSpeed = 0;
-                Stopped?.Invoke();
+                if (_frameVelocity.y == 0) Stopped?.Invoke();
                 break;
         }
         _currentSpeed += _moveDirection * acceleration;

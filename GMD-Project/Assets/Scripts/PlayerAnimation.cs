@@ -12,9 +12,9 @@ public class PlayerAnimation : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         
         // Subscribe to events
-        _playerMovement.Moving += (moveDirection) =>
+        _playerMovement.Moving += () => _animator.Play("player_walk");
+        _playerMovement.DirectionChanged += (moveDirection) =>
         {
-            _animator.Play("player_walk");
             if (moveDirection > 0)
             {
                 _spriteRenderer.flipX = false;
