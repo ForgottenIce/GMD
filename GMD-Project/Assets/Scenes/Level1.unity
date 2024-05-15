@@ -9855,7 +9855,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ef6f99f1b22ff7240992400d3dbd7616, type: 3}
   - {fileID: 21300000, guid: b489efee0356fb14089171888ed73127, type: 3}
   parallaxSpeed: 0.08
-  threshold: 18
+  repeatThreshold: 18
 --- !u!4 &784947124
 Transform:
   m_ObjectHideFlags: 0
