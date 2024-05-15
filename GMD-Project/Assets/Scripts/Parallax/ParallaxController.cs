@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Parallax
 {
@@ -8,7 +9,7 @@ namespace Parallax
         [SerializeField] private Transform cameraTransform;
         [SerializeField] private Sprite[] parallaxSprites;
         [SerializeField] private float parallaxSpeed;
-        [SerializeField] private float threshold;
+        [SerializeField] private float repeatThreshold;
         
         private readonly List<GameObject> _parallaxGameObjects = new();
         private void Start()
@@ -21,7 +22,7 @@ namespace Parallax
                 spriteRenderer.sprite = parallaxSprites[i];
                 spriteRenderer.sortingLayerName = "Background";
                 spriteRenderer.drawMode = SpriteDrawMode.Tiled;
-                spriteRenderer.size = new Vector2(144, 26);
+                spriteRenderer.size = new Vector2(100, 26);
                 
                 parallaxGameObject.transform.position = new Vector3(0, 0, i);
                 parallaxGameObject.transform.SetParent(transform);
@@ -38,7 +39,7 @@ namespace Parallax
             // Adjust position of parallax layers relative to parent object
             for (var i = 0; i < _parallaxGameObjects.Count; i++)
             {
-                var parallaxOffset = ((transform.position.x * (parallaxSpeed * (_parallaxGameObjects.Count - i)) + threshold) % (threshold * 2) - threshold) * -1;
+                var parallaxOffset = ((transform.position.x * (parallaxSpeed * (_parallaxGameObjects.Count - i)) + repeatThreshold) % (repeatThreshold * 2) - repeatThreshold) * -1;
                 _parallaxGameObjects[i].transform.localPosition = new Vector3(parallaxOffset, 0, _parallaxGameObjects[i].transform.position.z);
             }
         }
