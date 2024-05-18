@@ -8,8 +8,9 @@ namespace Parallax
     {
         [SerializeField] private Transform cameraTransform;
         [SerializeField] private Sprite[] parallaxSprites;
-        [SerializeField] private float parallaxSpeed;
-        [SerializeField] private float repeatThreshold;
+        [SerializeField] private float parallaxSpeedX = 0.08f;
+        [SerializeField] private float parallaxSpeedY = 0.01f;
+        [SerializeField] private float repeatThreshold = 18f;
         
         private readonly List<GameObject> _parallaxGameObjects = new();
         private void Start()
@@ -39,8 +40,9 @@ namespace Parallax
             // Adjust position of parallax layers relative to parent object
             for (var i = 0; i < _parallaxGameObjects.Count; i++)
             {
-                var parallaxOffset = ((transform.position.x * (parallaxSpeed * (_parallaxGameObjects.Count - i)) + repeatThreshold) % (repeatThreshold * 2) - repeatThreshold) * -1;
-                _parallaxGameObjects[i].transform.localPosition = new Vector3(parallaxOffset, 0, _parallaxGameObjects[i].transform.position.z);
+                var parallaxOffsetX = ((transform.position.x * (parallaxSpeedX * (_parallaxGameObjects.Count - i)) + repeatThreshold) % (repeatThreshold * 2) - repeatThreshold) * -1;
+                var parallaxOffsetY = transform.position.y * (parallaxSpeedY * (_parallaxGameObjects.Count - i)) * -1;
+                _parallaxGameObjects[i].transform.localPosition = new Vector3(parallaxOffsetX, parallaxOffsetY, _parallaxGameObjects[i].transform.position.z);
             }
         }
     }
