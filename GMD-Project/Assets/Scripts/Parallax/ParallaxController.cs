@@ -31,7 +31,7 @@ namespace Parallax
             }
         }
         
-        private void Update()
+        private void LateUpdate()
         {
             // Make parent follow camera
             transform.position = new Vector3(cameraTransform.position.x, cameraTransform.position.y, transform.position.z);

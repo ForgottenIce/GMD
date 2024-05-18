@@ -28,6 +28,7 @@ namespace Camera
         {
             _currentTarget = playerTransform;
             _previousTarget = playerTransform.position;
+            _elapsedTransitionTime = transitionSpeed;
         }
 
         private void LateUpdate()
