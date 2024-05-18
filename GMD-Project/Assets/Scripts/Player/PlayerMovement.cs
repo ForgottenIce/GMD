@@ -1,10 +1,11 @@
 using System;
+using Jumpable;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerMovement : MonoBehaviour, IJumpable
     {
         [SerializeField] private float maxSpeed;
         [SerializeField] private float acceleration;
@@ -17,6 +18,7 @@ namespace Player
         private bool _isJumpHeld;
         private bool _canJump;
         private bool _jumpConsumed;
+        private float _pendingJumpPower;
     
         private InputAction _moveAction;
         private InputAction _jumpAction;
@@ -63,7 +65,8 @@ namespace Player
         {
             Physics2D.queriesStartInColliders = false;
             var bounds = _col.bounds;
-            bool groundHit = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.down, 0.3f);
+            var groundHitRayCast = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.down, 0.3f);
+            bool groundHit = groundHitRayCast.collider != null && groundHitRayCast.collider.isTrigger == false;
             bool ceilingHit = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.up, 0.3f);
             if (!groundHit)
             {
@@ -71,7 +74,11 @@ namespace Player
                 if (newFallSpeed < -maxFallSpeed) newFallSpeed = -maxFallSpeed;
                 _frameVelocity = new Vector2(_frameVelocity.x, newFallSpeed);
                 _canJump = false;
-                if (_frameVelocity.y < 0) Falling?.Invoke();
+                if (_frameVelocity.y < 0)
+                {
+                    Falling?.Invoke();
+                    _pendingJumpPower = 0;
+                }
                 else Jumped?.Invoke();
             }
             else
@@ -116,6 +123,12 @@ namespace Player
 
         private void HandleJump()
         {
+            if (_pendingJumpPower > 0 && !_jumpConsumed)
+            {
+                _frameVelocity = new Vector2(_frameVelocity.x, _pendingJumpPower);
+                _jumpConsumed = true;
+            }
+            
             if (_canJump && _isJumpHeld && !_jumpConsumed)
             {
                 _frameVelocity = new Vector2(_frameVelocity.x, jumpPower);
@@ -123,11 +136,17 @@ namespace Player
             }
 
             // Descend when jump is released
-            if (!_canJump && !_isJumpHeld && _frameVelocity.y > 0)
+            if (!_canJump && !_isJumpHeld && _frameVelocity.y > 0 && _pendingJumpPower == 0)
             {
                 _frameVelocity = new Vector2(_frameVelocity.x, _frameVelocity.y * 0.2f);
             }
 
+        }
+
+        // Currently only used by JumpPads
+        public void Jump(float power)
+        {
+            _pendingJumpPower = power;
         }
     }
 }
