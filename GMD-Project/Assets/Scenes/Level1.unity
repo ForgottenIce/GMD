@@ -42954,45 +42954,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4125415880245166043, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: maxSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125415880245166043, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: dashPower
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125415880245166043, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: dashCooldown
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 5853606203916182658, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6268542250853708728, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: playerCameraOffset.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6862309686205620893, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: orthographic size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434752218014660051, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434752218014660051, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434752218014660051, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434752218014660051, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8509106564548742240, guid: 1ce726eaa80a4e048ac8013b24c4a422, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43258,6 +43222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPower: 35
   jumpDelay: 0.1
+  animationClip: {fileID: 7400000, guid: faa230df7a785194a81a393682a43266, type: 2}
 --- !u!95 &1208778597
 Animator:
   serializedVersion: 5

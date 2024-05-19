@@ -7,6 +7,7 @@ namespace Jumpable
     {
         [SerializeField] private float jumpPower;
         [SerializeField] private float jumpDelay;
+        [SerializeField] private AnimationClip animationClip;
 
         private Animator _animator;
         private void Start()
@@ -21,7 +22,10 @@ namespace Jumpable
                 var jumpable = other.gameObject.GetComponent<IJumpable>();
                 if (jumpable != null)
                 {
-                    _animator.Play("slimeguy_stomp", -1, 0);
+                    if (animationClip != null)
+                    {
+                        _animator.Play(animationClip.name, -1, 0);
+                    }
                     StartCoroutine(JumpAfterDelay(jumpable));
                 }
             }
