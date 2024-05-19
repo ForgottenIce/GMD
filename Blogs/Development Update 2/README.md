@@ -106,11 +106,14 @@ public class JumpPad : MonoBehaviour
 }
 ```
 
+And here is what it looks like in the game (I hope you appreciate my amazing jump pad sprite!):
+![Jump pad](media/jump-pad.gif)
+
 ### Dash ability
 I also wanted to implement the ability to dash, but I didn't finish it on time. Right now the animation is broken, and the mechanic itself still needs some work. Regardless, here's what it looks like at the moment:
 ![Dashing](media/dashing.gif)
 
-Yea, that needs some work :)
+Yea, that needs some work 😅
 
 
 ## Level design
@@ -135,4 +138,4 @@ Notice how the parallax makes the trees in the very back move a lot slower than 
 Here it looks like the trees in the very back move way too fast, since it's just a static image.
 
 ## The End
-The blog post ended up being a bit longer than it should have been, oops. I hope you can bare with me! Anyways, see you in the next blog post :)
+The blog post ended up being a bit longer than it should have been, oops. I hope you can bare with me! Anyways, see you in the next blog post 🙂
