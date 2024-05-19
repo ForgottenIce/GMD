@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 8509106564548742240}
-  playerCameraOffset: {x: 0, y: 3}
+  playerCameraOffset: {x: 0, y: 4}
   transitionSpeed: 0.5
 --- !u!1 &5853606203916182658
 GameObject:
@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 1605014466168605379}
   - component: {fileID: 3508081882189295369}
   - component: {fileID: 4125415880245166043}
+  - component: {fileID: 5175575150245407412}
   - component: {fileID: 8434553279102860299}
   - component: {fileID: 5921465583992177258}
   - component: {fileID: 5978184577166295299}
@@ -294,7 +295,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -319,11 +320,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207f866455759544c9d5d51b698676ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 12
-  acceleration: 0.5
+  maxSpeed: 14
+  acceleration: 2
   gravity: -1.25
   maxFallSpeed: 25
   jumpPower: 25
+  dashPower: 20
+  dashCooldown: 0.4
+--- !u!114 &5175575150245407412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5853606203916182658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b7f98286894671a53b65fba94110c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8434553279102860299
 MonoBehaviour:
   m_ObjectHideFlags: 0
