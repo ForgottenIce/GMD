@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 8509106564548742240}
-  playerCameraOffset: {x: 0, y: 4}
+  playerCameraOffset: {x: 0, y: 2}
   transitionSpeed: 0.5
 --- !u!1 &5853606203916182658
 GameObject:
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4831942642154095970}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
