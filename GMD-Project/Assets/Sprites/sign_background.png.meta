@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f1330c1a82f53e4b87a82e85dc0f094
+guid: f72605a9d566ddd41b274c0fe46866b8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,107 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: 16-bit-spike-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -1, y: 5}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
-        - {x: 1, y: 5}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5501f817c8effa4191f416ba572f5f9
-      internalID: 932214298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16-bit-spike-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: -8}
-        - {x: -8, y: 8}
-        - {x: 5, y: 1}
-        - {x: 5, y: -1}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62e9551332e807b43b97ec2223289d97
-      internalID: 2096123808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16-bit-spike-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -1, y: -5}
-        - {x: -8, y: 8}
-        - {x: 8, y: 8}
-        - {x: 1, y: -5}
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7ade2d868de51a41a4655c2ee407fc8
-      internalID: 560149668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16-bit-spike-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -5, y: -1}
-        - {x: -5, y: 1}
-        - {x: 8, y: 8}
-        - {x: 8, y: -8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 541cd3f3020e9084d84c29c21d08c9f2
-      internalID: 52993009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -232,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      16-bit-spike-Sheet_0: 932214298
-      16-bit-spike-Sheet_1: 2096123808
-      16-bit-spike-Sheet_2: 560149668
-      16-bit-spike-Sheet_3: 52993009
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

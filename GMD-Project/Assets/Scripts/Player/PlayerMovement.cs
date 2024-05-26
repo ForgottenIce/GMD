@@ -22,6 +22,7 @@ namespace Player
         private bool _jumpConsumed;
         private float _pendingJumpPower;
         private float _lastDashUsedTime;
+        private LayerMask _layerMask = LayerMask.NameToLayer("Default");
         
         private bool _touchingGround;
         private bool _touchingCeiling;
@@ -136,10 +137,10 @@ namespace Player
         {
             Physics2D.queriesStartInColliders = false;
             var bounds = _col.bounds;
-            _touchingGround = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.down, 0.3f);
-            _touchingCeiling = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.up, 0.3f);
-            _touchingLeftWall = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.left, 0.3f);
-            _touchingRightWall = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.right, 0.3f);
+            _touchingGround = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.down, 0.3f, 1);
+            _touchingCeiling = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.up, 0.3f, 1);
+            _touchingLeftWall = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.left, 0.3f, 1);
+            _touchingRightWall = Physics2D.CapsuleCast(bounds.center, _col.size, _col.direction, 0, Vector2.right, 0.3f, 1);
         }
 
         // TODO: Might need some refactoring

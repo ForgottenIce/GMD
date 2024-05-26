@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784668666501857544}
   - component: {fileID: 2908323336686353210}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CameraZone
   m_TagString: CameraZone
   m_Icon: {fileID: 0}
