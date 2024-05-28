@@ -22,7 +22,6 @@ namespace Player
         private bool _jumpConsumed;
         private float _pendingJumpPower;
         private float _lastDashUsedTime;
-        private LayerMask _layerMask = LayerMask.NameToLayer("Default");
         
         private bool _touchingGround;
         private bool _touchingCeiling;
