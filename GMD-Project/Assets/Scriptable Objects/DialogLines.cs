@@ -4,4 +4,5 @@ using UnityEngine;
 public class DialogLines : ScriptableObject
 {
    public string[] dialogLines;
+   public int DialogCount => dialogLines.Length;
 }
