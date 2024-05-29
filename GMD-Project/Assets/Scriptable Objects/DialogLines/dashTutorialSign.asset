@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: dashTutorialSign
   m_EditorClassIdentifier: 
   dialogLines:
-  - Hello there
-  - To get across, press the <sprite name="kenney_inputs_2"> key
+  - Hi there
+  - Did you know it is possible to dash? Try it out by pressing the <sprite name="kenney_inputs_2">
+    button

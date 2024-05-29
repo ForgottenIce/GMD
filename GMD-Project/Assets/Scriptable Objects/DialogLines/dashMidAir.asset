@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba17a109cf471e84a84e88ff4fa49a15, type: 3}
   m_Name: dashMidAir
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - How do you get across here?
+  - I think you should try the <sprite name="kenney_inputs_2"> button
