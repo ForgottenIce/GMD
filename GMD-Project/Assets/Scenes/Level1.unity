@@ -106885,7 +106885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &732409389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -108205,15 +108205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press <sprite name="kenney_inputs_0"> to jump
-
-    Press <sprite name="kenney_inputs_2">
-    to dash
-
-    Press <sprite name="kenney_inputs_3"> to interact
-
-    Move with
-    <sprite name="kenney_inputs_183"> to interact'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 31bdf1256238605498c5f4d216ad2e56, type: 2}
   m_sharedMaterial: {fileID: 8301108645970072262, guid: 31bdf1256238605498c5f4d216ad2e56, type: 2}
