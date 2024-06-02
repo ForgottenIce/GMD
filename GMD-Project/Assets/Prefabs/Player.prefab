@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2296457468072836646}
   - component: {fileID: 7443812088158184093}
   - component: {fileID: 6045523679537438869}
-  - component: {fileID: 184826462866194933}
   - component: {fileID: 3684147047708207297}
   - component: {fileID: 7597856854786429631}
   - component: {fileID: 6167775925520713812}
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 23905f0506b27b147868c2179dea2504, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -166,13 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207f866455759544c9d5d51b698676ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 14
-  acceleration: 2
-  gravity: -1.25
-  maxFallSpeed: 25
-  jumpPower: 25
-  dashPower: 20
-  dashCooldown: 0.4
+  playerStats: {fileID: 11400000, guid: 0c6461df945dd424a9e4fa62566bb620, type: 2}
 --- !u!114 &6045523679537438869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,18 +176,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7b7f98286894671a53b65fba94110c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &184826462866194933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149751535027806513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 562e8a12821caff4da65e4e81682ddeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3684147047708207297

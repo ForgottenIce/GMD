@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Jumpable
+namespace JumpPad
 {
     public class JumpPad : MonoBehaviour
     {
@@ -19,7 +19,7 @@ namespace Jumpable
         {
             if (other.contacts[0].normal.y < 0)
             {
-                var jumpable = other.gameObject.GetComponent<IJumpable>();
+                var jumpable = other.gameObject.GetComponent<IJumpPadInteractable>();
                 if (jumpable != null)
                 {
                     if (animationClip != null)
@@ -31,10 +31,10 @@ namespace Jumpable
             }
         }
         
-        private IEnumerator JumpAfterDelay(IJumpable jumpable)
+        private IEnumerator JumpAfterDelay(IJumpPadInteractable jumpPadInteractable)
         {
             yield return new WaitForSeconds(jumpDelay);
-            jumpable.Jump(jumpPower);
+            jumpPadInteractable.InteractWithJumpPad(jumpPower);
         }
     }
 }
