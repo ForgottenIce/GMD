@@ -13,8 +13,8 @@ For the first milestone, my aim is to have a playable character with most of the
 ## Milestone 2: Player Sprites, Gameplay Elements & Level Building
 This milestone will focus on implementing sprites for the different states the player can be in (idle, run, jump, dashing, etc.). There will also be a focus on implementing gameplay elements (like jump orbs, trampolines, etc.). And lastly, I will try and create the first level of the game.
 
-## Milestone 3 (preliminary): ~~Visuals & Polishing~~
-~~This milestone is a bit vague at the moment, but the idea is that the game is somewhat finished at this stage and that this last milestone focuses on making the game feel more finished.~~ This milestone will change
+## Milestone 3: State Machine, Enemies & UI Elements 
+In this milestone, I would like to implement a state machine system. The player's movement script should be refactored to use this system. There will also be a focus on creating at least one enemy for the game, which could also be built using the state machine. Lastly, there will be a focus on implementing some UI elements.
 
 ## Lore
 -Insert riveting game lore here-
