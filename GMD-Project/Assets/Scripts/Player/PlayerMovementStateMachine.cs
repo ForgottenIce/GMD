@@ -84,7 +84,7 @@ namespace Player
             }
             
             _currentState.EnterState(_playerContext);
-            Debug.Log("Entered state: " + _currentState.GetType().Name.Replace("Player", ""));
+            // Debug.Log("Entered state: " + _currentState.GetType().Name.Replace("Player", ""));
         }
         
         private void CheckCollisions()
@@ -102,6 +102,16 @@ namespace Player
         public void InteractWithJumpPad(float power)
         {
             _currentState.InteractWithJumpPad(_playerContext, power);
+        }
+        
+        public void JumpOrbCollected()
+        {
+            _playerContext.JumpOrbCollected = true;
+        }
+
+        public void DashOrbCollected()
+        {
+            _playerContext.DashAvailable = true;
         }
     }
 }

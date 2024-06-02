@@ -10,6 +10,7 @@ namespace Player.MovementStates
             context.Animator.Play("player_idle");
             
             context.DashAvailable = true;
+            context.JumpOrbCollected = false;
         }
 
         public override void Update(PlayerContext context)

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7443812088158184093}
   - component: {fileID: 6045523679537438869}
   - component: {fileID: 3684147047708207297}
+  - component: {fileID: 3811502348353638848}
   - component: {fileID: 7597856854786429631}
   - component: {fileID: 6167775925520713812}
   m_Layer: 0
@@ -191,6 +192,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 0}
+--- !u!114 &3811502348353638848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149751535027806513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa8232a0a9a4218a8128ffa3f22b9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbCooldown: 2
 --- !u!114 &7597856854786429631
 MonoBehaviour:
   m_ObjectHideFlags: 0

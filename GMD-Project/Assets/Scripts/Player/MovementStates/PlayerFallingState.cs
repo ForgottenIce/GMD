@@ -4,6 +4,7 @@ namespace Player.MovementStates
 {
     public class PlayerFallingState : PlayerMovementState
     {
+        private bool _jumpNextFixedUpdate;
         protected override void OnEnterState(PlayerContext context)
         {
             context.Animator.Play("player_fall");
@@ -15,7 +16,7 @@ namespace Player.MovementStates
 
         public override void Update(PlayerContext context)
         {
-            
+            if (context.PlayerInput.JumpPressed && context.JumpOrbCollected) _jumpNextFixedUpdate = true;
         }
 
         public override void FixedUpdate(PlayerContext context)
@@ -28,6 +29,14 @@ namespace Player.MovementStates
             
             HandleMovement(context);
             HandleGravity(context);
+            
+            if (_jumpNextFixedUpdate)
+            {
+                context.JumpOrbCollected = false;
+                _jumpNextFixedUpdate = false;
+                HandleJump(context);
+                StateComplete = true;
+            }
         }
     }
 }

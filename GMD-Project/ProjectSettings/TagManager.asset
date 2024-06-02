@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CameraZone
   - Enemy
+  - JumpOrb
+  - DashOrb
   layers:
   - Default
   - TransparentFX

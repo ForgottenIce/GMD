@@ -15,6 +15,7 @@ namespace Player
         public bool JumpPadUsed { get; set; }
         public bool CoyoteTimeActive { get; set; }
         public bool DashAvailable { get; set; }
+        public bool JumpOrbCollected { get; set; }
         
         public PlayerContext(PlayerStats playerStats, PlayerInput playerInput, Rigidbody2D rigidBody, Animator animator)
         {
