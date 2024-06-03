@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace StateMachine
+﻿namespace StateMachine
 {
     public abstract class State<TContext>
     {

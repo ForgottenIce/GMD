@@ -41,7 +41,9 @@ namespace Player
             _jumpingState = new PlayerJumpingState();
             _fallingState = new PlayerFallingState();
             _dashingState = new PlayerDashingState();
+            
             _currentState = _fallingState;
+            _currentState.EnterState(_playerContext);
         }
 
         private void Update()
@@ -49,7 +51,6 @@ namespace Player
             if (_currentState.StateComplete)
             {
                 SelectState();
-                return;
             }
             _currentState.Update(_playerContext);
         }
