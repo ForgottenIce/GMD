@@ -6,7 +6,7 @@ namespace Sign
 {
     public class SignInteractionHandler : MonoBehaviour
     {
-        [SerializeField] private DialogLines dialogLines;
+        [FormerlySerializedAs("dialogLines")] [SerializeField] private Dialog dialog;
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private SignUIHandler signUIHandler;
         private bool _isPlayerInRange;
@@ -25,14 +25,14 @@ namespace Sign
                 if (!_isPlayerReadingSign)
                 {
                     _isPlayerReadingSign = true;
-                    signUIHandler.ShowText(dialogLines.dialogLines[_currentDialogLine]);
+                    signUIHandler.ShowText(dialog.dialogLines[_currentDialogLine]);
                 }
                 else
                 {
                     _currentDialogLine++;
-                    if (_currentDialogLine < dialogLines.DialogCount)
+                    if (_currentDialogLine < dialog.DialogCount)
                     {
-                        signUIHandler.ShowText(dialogLines.dialogLines[_currentDialogLine]);
+                        signUIHandler.ShowText(dialog.dialogLines[_currentDialogLine]);
                     }
                     else
                     {
