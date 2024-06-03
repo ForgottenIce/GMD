@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cc95b26d011456f8a09ecb4e5203957, type: 3}
-  m_Name: SlimeKingStats
+  m_Script: {fileID: 11500000, guid: ba17a109cf471e84a84e88ff4fa49a15, type: 3}
+  m_Name: giantSlimeAhead
   m_EditorClassIdentifier: 
-  moveSpeed: 7
-  chargeSpeed: 28
-  chargeDuration: 0.5
-  chargeYOffset: 0.7
-  idleDuration: 2
-  patrolDuration: 3.8
+  dialogLines:
+  - 'WARNING
+
+    Giant slime ahead!'
