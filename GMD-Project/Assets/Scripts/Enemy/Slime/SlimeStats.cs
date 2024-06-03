@@ -7,7 +7,6 @@ namespace Enemy.Slime
     {
         [Header("Movement")]
         public float moveSpeed;
-        public float jumpPower;
         
         [Header("Charge")]
         public float chargeSpeed;
