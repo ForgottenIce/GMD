@@ -1,5 +1,4 @@
-﻿using Checkpoint;
-using Menus;
+﻿using Menus;
 using UnityEngine;
 
 namespace Player

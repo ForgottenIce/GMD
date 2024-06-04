@@ -1,4 +1,5 @@
 using System;
+using Menus;
 using UnityEngine;
 
 namespace MoneyBag
@@ -6,6 +7,7 @@ namespace MoneyBag
     public class CompleteLevel : MonoBehaviour
     {
         [SerializeField] private AudioSource backgroundMusicAudioSource;
+        [SerializeField] private LevelCompleteMenu levelCompleteMenu;
         
         private AudioSource _audioSource;
 
@@ -20,6 +22,7 @@ namespace MoneyBag
             {
                 backgroundMusicAudioSource.Stop();
                 _audioSource.Play();
+                levelCompleteMenu.ShowCompletionScreen();
             }
         }
     }

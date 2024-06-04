@@ -15,6 +15,9 @@ namespace Input
         
         // Menu input
         public bool PausePressed { get; private set; }
+        public bool MenuUpPressed { get; private set; }
+        public bool MenuDownPressed { get; private set; }
+        public bool MenuClickPressed { get; private set; }
         
         // Player input actions
         private InputAction _moveAction;
@@ -24,8 +27,12 @@ namespace Input
         
         // Menu input actions
         private InputAction _pauseAction;
-        private InputAction _confirmAction;
-        private InputAction _cancelAction;
+        private InputAction _menuUpAction;
+        private InputAction _menuDownAction;
+        private InputAction _menuClickAction;
+        
+        // Bool to disable pause button when in menus
+        public bool PauseButtonDisabled { get; set; }
         
         private void Start()
         {
@@ -35,6 +42,9 @@ namespace Input
             _interactAction = InputSystem.ListEnabledActions().Find(a => a.name == "Interact");
             
             _pauseAction = InputSystem.ListEnabledActions().Find(a => a.name == "Pause");
+            _menuUpAction = InputSystem.ListEnabledActions().Find(a => a.name == "MenuUp");
+            _menuDownAction = InputSystem.ListEnabledActions().Find(a => a.name == "MenuDown");
+            _menuClickAction = InputSystem.ListEnabledActions().Find(a => a.name == "MenuClick");
         }
         
         private void Update()
@@ -47,7 +57,10 @@ namespace Input
             DashHeld = _dashAction.ReadValue<float>() > 0;
             InteractPressed = _interactAction.triggered;   
             
-            PausePressed = _pauseAction.triggered;
+            PausePressed = _pauseAction.triggered && !PauseButtonDisabled;
+            MenuUpPressed = _menuUpAction.triggered;
+            MenuDownPressed = _menuDownAction.triggered;
+            MenuClickPressed = _menuClickAction.triggered;
         }
     }
 }
