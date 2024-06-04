@@ -15,9 +15,6 @@ namespace Input
         
         // Menu input
         public bool PausePressed { get; private set; }
-        public bool MenuUpPressed { get; private set; }
-        public bool MenuDownPressed { get; private set; }
-        public bool MenuClickPressed { get; private set; }
         
         // Player input actions
         private InputAction _moveAction;
@@ -27,9 +24,6 @@ namespace Input
         
         // Menu input actions
         private InputAction _pauseAction;
-        private InputAction _menuUpAction;
-        private InputAction _menuDownAction;
-        private InputAction _menuClickAction;
         
         // Pause properties
         public bool PauseButtonDisabled { get; set; }
@@ -42,9 +36,6 @@ namespace Input
             _interactAction = InputSystem.ListEnabledActions().Find(a => a.name == "Interact");
             
             _pauseAction = InputSystem.ListEnabledActions().Find(a => a.name == "Pause");
-            _menuUpAction = InputSystem.ListEnabledActions().Find(a => a.name == "MenuUp");
-            _menuDownAction = InputSystem.ListEnabledActions().Find(a => a.name == "MenuDown");
-            _menuClickAction = InputSystem.ListEnabledActions().Find(a => a.name == "MenuClick");
         }
         
         private void Update()
@@ -58,9 +49,6 @@ namespace Input
             InteractPressed = _interactAction.triggered;
             
             PausePressed = _pauseAction.triggered && !PauseButtonDisabled;
-            MenuUpPressed = _menuUpAction.triggered;
-            MenuDownPressed = _menuDownAction.triggered;
-            MenuClickPressed = _menuClickAction.triggered;
         }
     }
 }
