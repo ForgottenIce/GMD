@@ -31,7 +31,7 @@ namespace Input
         private InputAction _menuDownAction;
         private InputAction _menuClickAction;
         
-        // Bool to disable pause button when in menus
+        // Pause properties
         public bool PauseButtonDisabled { get; set; }
         
         private void Start()
@@ -55,7 +55,7 @@ namespace Input
             JumpHeld = _jumpAction.ReadValue<float>() > 0;
             DashPressed = _dashAction.triggered;
             DashHeld = _dashAction.ReadValue<float>() > 0;
-            InteractPressed = _interactAction.triggered;   
+            InteractPressed = _interactAction.triggered;
             
             PausePressed = _pauseAction.triggered && !PauseButtonDisabled;
             MenuUpPressed = _menuUpAction.triggered;
