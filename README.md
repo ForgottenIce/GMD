@@ -15,7 +15,7 @@ Below is a list of all the blog posts
 For my GMD-project, I developed a game called `Slime Forest: Arcade Adventure`. It's a 2D platformer with focus on movement.
 
 ### Youtube Video
-[A demonstration of the game in action can be found here](https://www.youtube.com)
+[A demonstration of the game in action can be found here](https://youtu.be/zEiievuTiGc)
 
 ### Third party sources
 Here is a list of third party assets used in the game.
