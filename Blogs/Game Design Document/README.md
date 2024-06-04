@@ -1,4 +1,4 @@
-# [INSERT GAME TITLE] - Game Design Document
+# Slime Forest: Arcade Adventure - Game Design Document
 This is my GDD (Game Design Document). The content of this document is subject to change, as it is hard to predict exactly what should be worked on ahead of time (SPOILERS: My milestones have changed quite a bit). Check the [Git history](https://github.com/ForgottenIce/GMD/commits/main/Blogs/Game%20Design%20Document/README.md) of this document if you are curious.
 
 ## The General Ideas for My Game
