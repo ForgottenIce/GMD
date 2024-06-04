@@ -27,6 +27,10 @@ namespace Player.MovementStates
             {
                 //TODO: Find a way to start a coroutine from the state machine
                 //StartCoroutine(TemporarilyActivateCoyoteTime(context));
+                
+                // Handle any last buffered jump inputs
+                if (_jumpNextFixedUpdate) HandleJump(context);
+                
                 StateComplete = true;
                 return;
             }
