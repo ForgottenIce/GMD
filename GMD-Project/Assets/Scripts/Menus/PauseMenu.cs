@@ -63,5 +63,65 @@ namespace Menus
         {
             Application.Quit();
         }
+
+        // private void HandleMenuNavigation()
+        // {
+        //     if (_isPaused && inputManager.MenuUpPressed)
+        //     {
+        //         _selectedButtonIndex--;
+        //         if (_selectedButtonIndex < 0)
+        //         {
+        //             _selectedButtonIndex = 2;
+        //         }
+        //         switch (_selectedButtonIndex)
+        //         {
+        //             case 0:
+        //                 _resumeButton.Select();
+        //                 break;
+        //             case 1:
+        //                 _restartButton.Select();
+        //                 break;
+        //             case 2:
+        //                 _exitButton.Select();
+        //                 break;
+        //         }
+        //     }
+        //     else if (_isPaused && inputManager.MenuDownPressed)
+        //     {
+        //         _selectedButtonIndex++;
+        //         if (_selectedButtonIndex > 2)
+        //         {
+        //             _selectedButtonIndex = 0;
+        //         }
+        //         switch (_selectedButtonIndex)
+        //         {
+        //             case 0:
+        //                 _resumeButton.Select();
+        //                 break;
+        //             case 1:
+        //                 _restartButton.Select();
+        //                 break;
+        //             case 2:
+        //                 _exitButton.Select();
+        //                 break;
+        //         }
+        //     }
+        // }
+        //
+        // private void HandleMenuClick()
+        // {
+        //     switch (_selectedButtonIndex)
+        //     {
+        //         case 0:
+        //             ResumeGame();
+        //             break;
+        //         case 1:
+        //             RestartGame();
+        //             break;
+        //         case 2:
+        //             ExitGame();
+        //             break;
+        //     }
+        // }
     }
 }
