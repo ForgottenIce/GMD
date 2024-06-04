@@ -32,7 +32,7 @@ namespace Unlockable
         }
         
         // Hacky way to play the audio clip before destroying the game object
-        IEnumerator DelayedDestroy()
+        private IEnumerator DelayedDestroy()
         {
             yield return new WaitForSeconds(1);
             Destroy(gameObject);
