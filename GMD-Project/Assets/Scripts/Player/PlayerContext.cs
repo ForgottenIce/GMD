@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using Input;
+using UnityEngine;
 
 namespace Player
 {
     public class PlayerContext
     {
         public PlayerStats PlayerStats { get; }
-        public PlayerInput PlayerInput { get; }
+        public InputManager InputManager { get; }
         public Rigidbody2D RigidBody { get; }
         public Animator Animator { get; }
         
@@ -17,10 +18,10 @@ namespace Player
         public bool DashAvailable { get; set; }
         public bool JumpOrbCollected { get; set; }
         
-        public PlayerContext(PlayerStats playerStats, PlayerInput playerInput, Rigidbody2D rigidBody, Animator animator)
+        public PlayerContext(PlayerStats playerStats, InputManager inputManager, Rigidbody2D rigidBody, Animator animator)
         {
             PlayerStats = playerStats;
-            PlayerInput = playerInput;
+            InputManager = inputManager;
             RigidBody = rigidBody;
             Animator = animator;
         }

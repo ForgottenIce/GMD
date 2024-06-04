@@ -15,12 +15,12 @@ namespace Player.MovementStates
 
         public override void Update(PlayerContext context)
         {
-            if (!context.CollisionData.TouchingGround || context.PlayerInput.MoveDirection != 0 || context.PlayerInput.DashPressed)
+            if (!context.CollisionData.TouchingGround || context.InputManager.MoveDirection != 0 || context.InputManager.DashPressed)
             {
                 StateComplete = true;
             }
             
-            if (context.PlayerInput.JumpPressed)
+            if (context.InputManager.JumpPressed)
             {
                 HandleJump(context);
             }

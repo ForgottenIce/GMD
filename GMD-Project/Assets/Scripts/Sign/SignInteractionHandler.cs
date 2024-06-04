@@ -1,3 +1,4 @@
+using Input;
 using Player;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -6,8 +7,8 @@ namespace Sign
 {
     public class SignInteractionHandler : MonoBehaviour
     {
-        [FormerlySerializedAs("dialogLines")] [SerializeField] private Dialog dialog;
-        [SerializeField] private PlayerInput playerInput;
+        [SerializeField] private Dialog dialog;
+        [SerializeField] private InputManager inputManager;
         [SerializeField] private SignUIHandler signUIHandler;
         private bool _isPlayerInRange;
         private bool _isPlayerReadingSign;
@@ -20,7 +21,7 @@ namespace Sign
         }
         private void Update()
         {
-            if (_isPlayerInRange && playerInput.InteractPressed)
+            if (_isPlayerInRange && inputManager.InteractPressed)
             {
                 if (!_isPlayerReadingSign)
                 {

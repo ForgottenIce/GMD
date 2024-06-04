@@ -16,12 +16,12 @@ namespace Player.MovementStates
 
         public override void Update(PlayerContext context)
         {
-            if (context.PlayerInput.JumpPressed && context.JumpOrbCollected) _jumpNextFixedUpdate = true;
+            if (context.InputManager.JumpPressed && context.JumpOrbCollected) _jumpNextFixedUpdate = true;
         }
 
         public override void FixedUpdate(PlayerContext context)
         {
-            if (context.CollisionData.TouchingGround || (context.PlayerInput.DashHeld && context.DashAvailable))
+            if (context.CollisionData.TouchingGround || (context.InputManager.DashHeld && context.DashAvailable))
             {
                 StateComplete = true;
                 return;

@@ -17,13 +17,13 @@ namespace Player.MovementStates
 
         public override void Update(PlayerContext context)
         {
-            if (context.PlayerInput.JumpPressed) _jumpNextFixedUpdate = true;
-            if (context.PlayerInput.DashPressed) _dashWasPressed = true;
+            if (context.InputManager.JumpPressed) _jumpNextFixedUpdate = true;
+            if (context.InputManager.DashPressed) _dashWasPressed = true;
         }
 
         public override void FixedUpdate(PlayerContext context)
         {
-            if (!context.CollisionData.TouchingGround || context.PlayerInput.MoveDirection == 0 || _dashWasPressed)
+            if (!context.CollisionData.TouchingGround || context.InputManager.MoveDirection == 0 || _dashWasPressed)
             {
                 //TODO: Find a way to start a coroutine from the state machine
                 //StartCoroutine(TemporarilyActivateCoyoteTime(context));

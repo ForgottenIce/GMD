@@ -9,7 +9,7 @@
 
         public override void FixedUpdate(PlayerContext context)
         {
-            if (context.CollisionData.TouchingGround || context.RigidBody.velocity.y <= 0 || context.PlayerInput.DashHeld || (!context.PlayerInput.JumpHeld && !context.JumpPadUsed))
+            if (context.CollisionData.TouchingGround || context.RigidBody.velocity.y <= 0 || context.InputManager.DashHeld || (!context.InputManager.JumpHeld && !context.JumpPadUsed))
             {
                 StateComplete = true;
                 return;

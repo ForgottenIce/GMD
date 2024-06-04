@@ -11,10 +11,10 @@ namespace Player.MovementStates
         {
             var currentVelocity = context.RigidBody.velocity;
             var playerStats = context.PlayerStats;
-            var playerInput = context.PlayerInput;
+            var playerInput = context.InputManager;
             var transform = context.RigidBody.transform;
             
-            switch (context.PlayerInput.MoveDirection)
+            switch (context.InputManager.MoveDirection)
             {
                 case -1:
                     transform.localScale = new Vector3(-Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -25,7 +25,7 @@ namespace Player.MovementStates
                 case 1:
                     transform.localScale = new Vector3(Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                     if (currentVelocity.x < 0) currentVelocity.x = 0;
-                    currentVelocity.x += context.PlayerInput.MoveDirection * playerStats.acceleration;
+                    currentVelocity.x += context.InputManager.MoveDirection * playerStats.acceleration;
                     if (context.CollisionData.TouchingRightWall) currentVelocity.x = 0;
                     break;
                 case 0:

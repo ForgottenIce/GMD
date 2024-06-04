@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2933169676901018616}
   - component: {fileID: 2296457468072836646}
   - component: {fileID: 7443812088158184093}
-  - component: {fileID: 6045523679537438869}
   - component: {fileID: 3684147047708207297}
   - component: {fileID: 3811502348353638848}
+  - component: {fileID: 3120455920429665113}
   - component: {fileID: 7597856854786429631}
   - component: {fileID: 6167775925520713812}
   m_Layer: 0
@@ -167,18 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 0c6461df945dd424a9e4fa62566bb620, type: 2}
---- !u!114 &6045523679537438869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149751535027806513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7b7f98286894671a53b65fba94110c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3684147047708207297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +193,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbCooldown: 2
+--- !u!114 &3120455920429665113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149751535027806513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9c4b7dfaa84fbea5815c5f812103c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7597856854786429631
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
+using Input;
 using JumpPad;
 using Player.MovementStates;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -13,7 +15,7 @@ namespace Player
         private PlayerContext _playerContext;
     
         // Components
-        private PlayerInput _playerInput;
+        [SerializeField] private InputManager inputManager;
         private Rigidbody2D _rb;
         private CapsuleCollider2D _col;
         private Animator _animator;
@@ -31,10 +33,9 @@ namespace Player
         {
             _rb = GetComponent<Rigidbody2D>();
             _col = GetComponent<CapsuleCollider2D>();
-            _playerInput = GetComponent<PlayerInput>();
             _animator = GetComponent<Animator>();
             
-            _playerContext = new PlayerContext(playerStats, _playerInput, _rb, _animator);
+            _playerContext = new PlayerContext(playerStats, inputManager, _rb, _animator);
             
             _idleState = new PlayerIdleState();
             _movingState = new PlayerMovingState();
@@ -63,19 +64,19 @@ namespace Player
 
         private void SelectState()
         {
-            if (_playerInput.DashHeld && _playerContext.DashAvailable)
+            if (inputManager.DashHeld && _playerContext.DashAvailable)
             {
                 _currentState = _dashingState;
             }
-            else if (_playerContext.CollisionData.TouchingGround && _playerInput.MoveDirection == 0)
+            else if (_playerContext.CollisionData.TouchingGround && inputManager.MoveDirection == 0)
             {
                 _currentState = _idleState;
             }
-            else if (_playerContext.CollisionData.TouchingGround && _playerInput.MoveDirection != 0)
+            else if (_playerContext.CollisionData.TouchingGround && inputManager.MoveDirection != 0)
             {
                 _currentState = _movingState;
             }
-            else if (!_playerContext.CollisionData.TouchingGround && _rb.velocity.y > 0 && (_playerInput.JumpHeld || _playerContext.JumpPadUsed))
+            else if (!_playerContext.CollisionData.TouchingGround && _rb.velocity.y > 0 && (inputManager.JumpHeld || _playerContext.JumpPadUsed))
             {
                 _currentState = _jumpingState;
             }
