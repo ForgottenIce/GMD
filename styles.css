@@ -65,7 +65,7 @@ h1, h2, h3 {
 
 .card h1 {
   color: var(--white);
-  font-size: 26px;
+  font-size: 18px;
   margin: .3em;
 }
 
