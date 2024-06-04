@@ -1,7 +1,4 @@
-﻿# TODOs
-- Make menu navigation better
-
-# Low Priority TODOs
+﻿# Low Priority TODOs
 - Fix bug where holding dash can trigger another dash between state transitions
 - Snap to ground when landing
 - Find a way to start a coroutine from the player states
