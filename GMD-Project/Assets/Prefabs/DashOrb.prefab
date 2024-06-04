@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 689652625231593817}
   - component: {fileID: 2371242991884156848}
   m_Layer: 2
-  m_Name: DashOrb
+  m_Name: OrbInstance
   m_TagString: DashOrb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

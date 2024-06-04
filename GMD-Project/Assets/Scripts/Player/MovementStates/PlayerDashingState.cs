@@ -8,6 +8,8 @@ namespace Player.MovementStates
         protected override void OnEnterState(PlayerContext context)
         {
             context.Animator.Play("player_dash");
+            var dashAudioClip = context.AudioClips.GetClip("player_dash");
+            context.AudioSource.PlayOneShot(dashAudioClip);
             
             _dashUsedTime = Time.time;
             var currentVelocity = context.RigidBody.velocity;

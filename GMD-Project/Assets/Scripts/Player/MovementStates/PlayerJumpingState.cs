@@ -5,6 +5,8 @@
         protected override void OnEnterState(PlayerContext context)
         {
             context.Animator.Play("player_jump");
+            var jumpAudioClip = context.AudioClips.GetClip("player_jump");
+            context.AudioSource.PlayOneShot(jumpAudioClip);
         }
 
         public override void FixedUpdate(PlayerContext context)

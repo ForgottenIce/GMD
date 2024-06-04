@@ -16,6 +16,7 @@ namespace Checkpoint
             if (_currentCheckpoint != null) _currentCheckpoint.GetAnimator().Play("checkpoint_uncollected");
             _currentCheckpoint = checkpoint;
             _currentCheckpoint.GetAnimator().Play("checkpoint_collected");
+            _currentCheckpoint.GetAudioSource().Play();
         }
         
         public void RestartAtCurrentCheckpoint()

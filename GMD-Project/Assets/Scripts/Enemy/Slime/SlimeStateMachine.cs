@@ -1,4 +1,5 @@
 using Enemy.Slime.States;
+using Scriptable_Objects.Audio;
 using UnityEngine;
 
 namespace Enemy.Slime
@@ -10,14 +11,15 @@ namespace Enemy.Slime
         [SerializeField] private Collider2D visionRadius;
         [SerializeField] private Collider2D patrolArea;
         [SerializeField] private Rigidbody2D playerRigidbody;
+        [SerializeField] private AudioClips slimeAudioClips;
         
         // Context
         private SlimeContext _slimeContext;
         
         // Components
         private Rigidbody2D _rb;
-        private Collider2D _col;
         private Animator _animator;
+        private AudioSource _audioSource;
         
         // States
         private SlimeState _idleState;
@@ -30,8 +32,9 @@ namespace Enemy.Slime
         {
             _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+            _audioSource = GetComponent<AudioSource>();
             
-            _slimeContext = new SlimeContext(slimeStats, _rb, _col, _animator, visionRadius, patrolArea, playerRigidbody);
+            _slimeContext = new SlimeContext(slimeStats, _rb, _animator, _audioSource, slimeAudioClips, visionRadius, patrolArea, playerRigidbody);
             
             _idleState = new SlimeIdleState();
             _patrollingState = new SlimePatrollingState();

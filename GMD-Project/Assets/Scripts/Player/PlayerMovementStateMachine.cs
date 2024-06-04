@@ -1,6 +1,7 @@
 using Input;
 using JumpPad;
 using Player.MovementStates;
+using Scriptable_Objects.Audio;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,6 +12,9 @@ namespace Player
         // Stats
         [SerializeField] private PlayerStats playerStats;
         
+        // Audio Clips
+        [SerializeField] private AudioClips playerAudioClips;
+        
         // Context
         private PlayerContext _playerContext;
     
@@ -19,6 +23,7 @@ namespace Player
         private Rigidbody2D _rb;
         private CapsuleCollider2D _col;
         private Animator _animator;
+        private AudioSource _audioSource;
         
         // States
         private PlayerMovementState _idleState;
@@ -34,8 +39,9 @@ namespace Player
             _rb = GetComponent<Rigidbody2D>();
             _col = GetComponent<CapsuleCollider2D>();
             _animator = GetComponent<Animator>();
+            _audioSource = GetComponent<AudioSource>();
             
-            _playerContext = new PlayerContext(playerStats, inputManager, _rb, _animator);
+            _playerContext = new PlayerContext(playerStats, inputManager, _rb, _animator, _audioSource, playerAudioClips);
             
             _idleState = new PlayerIdleState();
             _movingState = new PlayerMovingState();

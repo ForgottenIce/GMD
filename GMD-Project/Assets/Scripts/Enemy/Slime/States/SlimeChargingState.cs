@@ -8,6 +8,8 @@ namespace Enemy.Slime.States
         protected override void OnEnterState(SlimeContext context)
         {
             context.Animator.Play("slime_charge");
+            var chargeAudioClip = context.AudioClips.GetClip("slime_charge");
+            context.AudioSource.PlayOneShot(chargeAudioClip);
             
             _chargeUsedTime = Time.time;
             ChargeTowardsPlayer(context);
