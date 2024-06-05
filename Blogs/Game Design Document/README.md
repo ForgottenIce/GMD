@@ -1,5 +1,5 @@
 # Slime Forest: Arcade Adventure - Game Design Document
-This is my GDD (Game Design Document). The content of this document is subject to change, as it is hard to predict exactly what should be worked on ahead of time (SPOILERS: My milestones have changed quite a bit). Check the [Git history](https://github.com/ForgottenIce/GMD/commits/main/Blogs/Game%20Design%20Document/README.md) of this document if you are curious.
+This is my GDD (Game Design Document). The content of this document has changed over time. Check the [Git history](https://github.com/ForgottenIce/GMD/commits/main/Blogs/Game%20Design%20Document/README.md) of this file if you are curious.
 
 ## The General Ideas for My Game
 - It's a 2D platformer
@@ -16,16 +16,14 @@ This milestone will focus on implementing sprites for the different states the p
 ## Milestone 3: State Machine, Enemies & UI Elements 
 In this milestone, I would like to implement a state machine system. The player's movement script should be refactored to use this system. There will also be a focus on creating at least one enemy for the game, which could also be built using the state machine. Lastly, there will be a focus on implementing some UI elements.
 
-## Lore
--Insert riveting game lore here-
-
-
 ## Game Ideas / Features to Implement
 - Abilities
   - Dashing
   - Double jump
   - Speed boost
-  - Ceiling grab (stick to the ceiling)
-  - Gravity flip
+  - ~~Ceiling grab (stick to the ceiling)~~
+  - ~~Gravity flip~~
 - Trampolines / Bouncy objects
-- Pickup objects (such as trampolines, boxes or other stuff)
+- ~~Pickup objects (such as trampolines, boxes or other stuff)~~
+
+The above list is incomplete, and was created at the start of the course. Check out the [Game Showoff Blog Post](../Game%20Showoff/README.md) to see the final list of features in the game
