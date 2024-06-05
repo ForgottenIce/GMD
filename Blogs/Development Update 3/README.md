@@ -23,9 +23,9 @@ The `Update` loop had to check all these booleans all the time to determine the 
 
 ![Player States](media/player-states.png)
 
-Each state has its own `Update` loop, and only needs to manage its own logic (e.g. the MovingState only handles moving). Since only one state is active at a time, it makes it much simpler to debug if there are problems.
+Each state has its own `Update` loop, and only needs to manage its own logic. Since only one state is active at a time, it makes it much simpler to debug if there are problems.
 
-To manage all these states and figure out what state should be active, a "brain" is needed. This "brain" is the `PlayerMovementStateMachine` script. It is responsible for instantiating all the states and give each states access to the Player's components (like Rigidbodies, Colliders, etc.). Lastly, it determines what the next state should be when a state has finished.
+To manage all these states and figure out what state should be active, a "brain" is needed. This "brain" is the `PlayerMovementStateMachine` script. It is responsible for instantiating all the states and give each state access to the Player's components (like Rigidbodies, Colliders, etc.). Lastly, it determines what the next state should be when a state has finished.
 
 Overall, this refactor has turned what once was an overly complex `PlayerMovement` script into a simple, easily extendable `PlayerMovementStateMachine` script.
 
