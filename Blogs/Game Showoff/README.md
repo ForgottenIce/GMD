@@ -59,7 +59,7 @@ The game features a dialog system. By pressing the interact button, the player c
 ![Sign Dialog](media/sign-dialog.gif)
 
 ## Menus
-The game three menus: a pause menu, a respawn menu and an ending screen. These menus help the player perform actions such as pausing the game, respawing at the last checkpoint, restarting the game or exiting the game.
+The game has three menus: a pause menu, a respawn menu and an ending screen. These menus help the player perform actions such as pausing the game, respawing at the last checkpoint, restarting the game or exiting the game.
 
 ![Pause Menu](media/pause-menu.gif)
 
