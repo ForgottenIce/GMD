@@ -12,15 +12,20 @@ Below is a list of all the blog posts
 7. [Contribution Reflections](Blogs/Contribution%20Reflections/README.md)
 
 ## Slime Forest: Arcade Adventure
-For my GMD-project, I developed a game called `Slime Forest: Arcade Adventure`. It's a 2D platformer with focus on movement.
+For my GMD-project, I developed a game called `Slime Forest: Arcade Adventure`. It's a 2D platformer with focus on movement, abilities & obstacles
 
-### Youtube Video
+### YouTube Video
+[![YouTube Demonstration](media/slime-forest-arcade-adventure-thumbnail.png)](https://youtu.be/zEiievuTiGc)
 [A demonstration of the game in action can be found here](https://youtu.be/zEiievuTiGc)
 
 ### Third party sources
 Here is a list of third party assets used in the game.
 
-https://pixabay.com/sound-effects/search/8-bit/
+1. adve Tile Map [(itch.io)](https://egordorichev.itch.io/adve)
+2. Kenney Controller Input Sprites [(itch.io)](https://kenney-assets.itch.io/input-prompts-pixel-16)
+3. Seasonal Tilesets [(itch.io)](https://grafxkid.itch.io/seasonal-tilesets)
+4. Sound Effects [(pixabay.com)](https://pixabay.com/sound-effects/search/8-bit/)
+5. Thaleah Pixel Font [(assetstore.unity.com)](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059)
 
 
 ## WebGL Builds
