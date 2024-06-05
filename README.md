@@ -31,3 +31,6 @@ Here is a list of third party assets used in the game.
 
 ## WebGL Builds
 WebGL builds of `Roll a Ball` and `Slime Forest: Arcade Adventure` can be found at [https://forgottenice.github.io/GMD](https://forgottenice.github.io/GMD/)
+
+## Windows Builds
+A Windows build of `Slime Forest: Arcade Adventure` can be found on the [releases page](https://github.com/ForgottenIce/GMD/releases/tag/v1.0)
