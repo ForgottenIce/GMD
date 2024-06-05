@@ -16,6 +16,7 @@ For my GMD-project, I developed a game called `Slime Forest: Arcade Adventure`. 
 
 ### YouTube Video
 [![YouTube Demonstration](media/slime-forest-arcade-adventure-thumbnail.png)](https://youtu.be/zEiievuTiGc)
+
 [A demonstration of the game in action can be found here](https://youtu.be/zEiievuTiGc)
 
 ### Third party sources
