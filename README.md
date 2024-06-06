@@ -19,7 +19,7 @@ For my GMD-project, I developed a game called `Slime Forest: Arcade Adventure`. 
 
 [A demonstration of the game in action can be found here](https://youtu.be/zEiievuTiGc)
 
-### Third party sources
+### Third Party Sources
 Here is a list of third party assets used in the game.
 
 1. adve Tile Map [(itch.io)](https://egordorichev.itch.io/adve)
@@ -27,7 +27,7 @@ Here is a list of third party assets used in the game.
 3. Seasonal Tilesets [(itch.io)](https://grafxkid.itch.io/seasonal-tilesets)
 4. Sound Effects [(pixabay.com)](https://pixabay.com/sound-effects/search/8-bit/)
 5. Thaleah Pixel Font [(assetstore.unity.com)](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059)
-
+6. Pixel Art Slime [(itch.io)](https://diogo-vernier.itch.io/pixel-art-slime)
 
 ## WebGL Builds
 WebGL builds of `Roll a Ball` and `Slime Forest: Arcade Adventure` can be found at [https://forgottenice.github.io/GMD](https://forgottenice.github.io/GMD/)
